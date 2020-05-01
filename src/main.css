@@ -1,0 +1,19 @@
+.side-bar{
+    background-color: grey;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    padding: .5em;
+    font-size: small;
+}
+.main-untoggled{
+    display: grid;
+    grid-template-columns: 15% auto;
+    background-color: #2196F3;
+    height: 100%;
+}
+.main-toggled{
+    display: flex;
+    background-color: #2196F3;
+    height: 100%;
+}
