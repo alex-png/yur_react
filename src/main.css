@@ -3,17 +3,27 @@
     z-index: 2;
     left: 0;
     top: 0;
-    padding: .5em;
     font-size: small;
+    border-right: solid thin;
+    border-color: aqua;
 }
-.main-untoggled{
+.main{
     display: grid;
-    grid-template-columns: 15% auto;
+    grid-template-columns: 15em auto;
     background-color: #2196F3;
     height: 100%;
 }
-.main-toggled{
-    display: flex;
-    background-color: #2196F3;
-    height: 100%;
+.top{
+    height: 7vh;
+    border: solid thin;
+    border-right: none;
+    border-left: none;
+    border-color: aqua;
+}
+.side-bar-section{
+    border-bottom: solid thin;
+    border-color: aqua;
+    text-align: left;
+    padding-left: 1vh;
+    overflow: hidden;
 }
