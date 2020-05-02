@@ -3,7 +3,7 @@ import React from 'react'
 function Top(props) {
     
     return (
-        <div className='top'>
+        <div className={props.togglable? "top-togglable":"top" }>
             <div className='top-content'>
             {props.children}
             </div>

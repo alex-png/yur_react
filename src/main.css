@@ -26,7 +26,17 @@
     overflow: hidden;
     position: relative;
 }
-.top:hover{
+
+.top-togglable{
+    height: 7vh;
+    border: solid thin;
+    border-right: none;
+    border-left: none;
+    border-color: rgba(171, 173, 175, 0.2);
+    overflow: hidden;
+    position: relative;
+}
+.top-togglable:hover{
     background-color: black;
     cursor: pointer;
 }
@@ -66,4 +76,10 @@
     padding: 1em;
     resize: none;
     outline: none;
+}
+
+/*  */
+.dropdown-arrow-left{
+    padding-left: .2em;
+    font-size: larger;
 }

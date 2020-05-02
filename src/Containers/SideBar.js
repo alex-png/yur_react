@@ -4,9 +4,9 @@ import SideBarSection from '../Components/SideBarSection.js'
 function SideBar() {
     return (
         <div className="side-bar">
-            <Top>
+            <Top togglable="true">
                 <div>
-                    <h2 style={{ margin: '0' }}>Flatiron School<span>⌄</span></h2>
+                    <h2 style={{ margin: '0' }}>Flatiron School <span className="dropdown-arrow-left">⌄</span></h2>
                     <span style={{color: "rgb(171, 173, 175)"}}>Alex Rodriguez</span>
                 </div>
             </Top>

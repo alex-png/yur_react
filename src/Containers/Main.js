@@ -9,7 +9,7 @@ function Main() {
         <div className="main">
             <SideBar />
             <div name="Body">
-                <Top style={{pointerEvents: "none", cursor:"none"}} />
+                <Top/>
                 <Chatroom />
             </div>
         </div>)
