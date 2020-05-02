@@ -1,29 +1,50 @@
+
+.main{
+    display: grid;
+    grid-template-columns: 15em auto;
+    background-color: rgb(34, 37, 40);
+    height: 100%;
+}
+/* side bar stuff here below */
 .side-bar{
-    background-color: grey;
+    background-color: rgb(34, 37, 40);
     z-index: 2;
     left: 0;
     top: 0;
     font-size: small;
     border-right: solid thin;
-    border-color: aqua;
-}
-.main{
-    display: grid;
-    grid-template-columns: 15em auto;
-    background-color: #2196F3;
-    height: 100%;
+    border-color: rgba(171, 173, 175, 0.2);
+    color: white;
 }
 .top{
     height: 7vh;
     border: solid thin;
     border-right: none;
     border-left: none;
-    border-color: aqua;
+    border-color: rgba(171, 173, 175, 0.2);
+    overflow: hidden;
+    position: relative;
+}
+.top:hover{
+    background-color: black;
+    cursor: pointer;
+}
+.top-content{
+    display: flex;
+    padding: .4em;
 }
 .side-bar-section{
     border-bottom: solid thin;
-    border-color: aqua;
+    border-color: rgba(171, 173, 175, 0.2);
     text-align: left;
     padding-left: 1vh;
     overflow: hidden;
+}
+.side-bar-section:hover{
+    background-color: black;
+    cursor: pointer;
+}
+
+.solid-down-arrow{
+    font-size: small;
 }

@@ -8,7 +8,7 @@ function Main() {
         <div className="main">
             <SideBar />
             <div name="Body">
-                <Top />
+                <Top style={{pointerEvents: "none"}}/>
             </div>
         </div>)
 }
