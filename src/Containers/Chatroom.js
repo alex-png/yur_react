@@ -3,6 +3,7 @@ import Messages from './Messages'
 
 class Chatroom extends React.Component {
     state = {
+        messages: null,
         message: ""
     }
 

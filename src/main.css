@@ -95,3 +95,20 @@
     height: 80%;
     overflow: scroll;
 }
+.message{
+    height: 2em;
+    color: white;
+    
+}
+
+.message:hover{
+    background-color: #303438;
+}
+
+.waiting-room{
+    height: 93vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #747577;
+}
