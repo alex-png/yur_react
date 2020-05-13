@@ -70,7 +70,6 @@
 
 .chat-input{
     margin: 1em;
-    margin-top: 0;
     width: -webkit-fill-available;
     height: 80%;
     border-radius: .5em;
@@ -96,9 +95,11 @@
     overflow: scroll;
 }
 .message{
-    height: 2em;
     color: white;
-    
+    display: flex;
+    align-items: center;
+    padding: 1em;
+
 }
 
 .message:hover{
@@ -111,4 +112,7 @@
     justify-content: center;
     align-items: center;
     color: #747577;
+}
+.bottom-filler{
+
 }
