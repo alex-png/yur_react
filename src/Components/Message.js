@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function Message(props) {
     return (
-        <div className = "message">
+        <li className="message">
             {props["message"].message}
             {props["message"].id}
-        </div>
+        </li>
     )
 }
