@@ -28,7 +28,9 @@ export default class Messages extends React.Component {
     }
 
     componentDidUpdate() {
-
+        if(this.state.messages.length % 10 === 0){
+            console.log("REORDER!")
+        }
         this.scrollToBottom();
     }
 
