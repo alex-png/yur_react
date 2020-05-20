@@ -24,26 +24,10 @@ export default class Messages extends React.Component {
     }
 
     scrollToBottom = () => {
-        this.messagesEnd.scrollIntoView({ behavior: "smooth" });
+        this.messagesEnd.scrollIntoView({ behavior: "auto" });
     }
 
     componentDidUpdate() {
-        if (this.state.messages.length === 40) {
-            let orderedState = [...this.state.messages]
-            setTimeout(() => {
-                console.log("ordering...")
-                orderedState.sort((a, b) => {
-                    if (a.id > b.id) return 1;
-                    if (a.id < b.id) return -1;
-                    return 0;
-                });
-
-                this.setState({
-                    messages: orderedState
-                })
-
-            }, 10000)
-        }
         this.scrollToBottom();
     }
 
@@ -64,7 +48,24 @@ export default class Messages extends React.Component {
                     this.setState(prevState => ({
                         messages: [...prevState.messages, json]
                     }))
-                })
+                }).then(() => {
+                    //reordering messages by timestamp
+                    if (this.state.messages.length % 2 === 0) {                        
+                        let unorderedState = [...this.state.messages]
+                        let orderedState
+                        console.log("ordering...")
+                        orderedState = unorderedState.sort((a, b) => {
+                            if (a.id > b.id) return 1;
+                            if (a.id < b.id) return -1;
+                            return 0;
+                        })
+
+                        this.setState({
+                            messages: orderedState
+                        })
+
+                    }//end of if
+                }) //end of then
                 .catch(err => {
                     console.log("ERROR!", err);
                 });
