@@ -12,11 +12,11 @@ export default class Messages extends React.Component {
     render() {
         return (
             <div className="messages">
-                <div id="top-filler"style={{ height: "30em" }} />
+                <div id="top-filler" style={{ height: "30em" }} />
                 <ul>
-                {this.state.messages.map((obj, index) => {
-                    return <Message message={obj} key={index} />
-                })}
+                    {this.state.messages.map((obj, index) => {
+                        return <Message message={obj} key={index} />
+                    })}
                 </ul>
                 <div id="bottom-filler" ref={(el) => { this.messagesEnd = el; }} />
             </div>
@@ -28,8 +28,21 @@ export default class Messages extends React.Component {
     }
 
     componentDidUpdate() {
-        if(this.state.messages.length % 10 === 0){
-            console.log("REORDER!")
+        if (this.state.messages.length === 40) {
+            let orderedState = [...this.state.messages]
+            setTimeout(() => {
+                console.log("ordering...")
+                orderedState.sort((a, b) => {
+                    if (a.id > b.id) return 1;
+                    if (a.id < b.id) return -1;
+                    return 0;
+                });
+
+                this.setState({
+                    messages: orderedState
+                })
+
+            }, 10000)
         }
         this.scrollToBottom();
     }
