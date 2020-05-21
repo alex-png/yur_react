@@ -3,8 +3,8 @@ import Messages from './Messages'
 
 class Chatroom extends React.Component {
     state = {
-        messages: null,
-        message: ""
+        message: "",
+        userSent: false
     }
 
     handleSubmit = (e) => {
@@ -12,7 +12,7 @@ class Chatroom extends React.Component {
         let message = this.state.message;
         //send message to backend
         console.log(message)
-        this.setState({message:""})
+        this.setState({ message: "" })
     }
 
     handleChange = (e) => {
@@ -35,8 +35,8 @@ class Chatroom extends React.Component {
                 </form>
             </div>
 
-        
-)
+
+        )
     }
 }
 

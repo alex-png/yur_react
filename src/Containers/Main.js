@@ -2,8 +2,8 @@ import React from 'react';
 import SideBar from './SideBar'
 import Top from '../Components/Top'
 import '../main.css'
-import Chatroom from './Chatroom';
-
+// import Chatroom from './Chatroom';
+import Messages from './Messages';
 function Main() {
     // let state = ({
     //     enteredOrganizationServer: false
@@ -19,7 +19,8 @@ function Main() {
             
             <div name="Body">
                 <Top />
-                <Chatroom />
+                <Messages />
+                {/* <Chatroom /> */}
                 {/* {state.enteredOrganizationServer? <Chatroom /> :<div className="waiting-room"><p>Join a server to get started!</p></div>} */}
                 
             </div>
