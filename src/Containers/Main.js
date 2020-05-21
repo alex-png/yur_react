@@ -20,7 +20,6 @@ function Main() {
             <div name="Body">
                 <Top />
                 <Messages />
-                {/* <Chatroom /> */}
                 {/* {state.enteredOrganizationServer? <Chatroom /> :<div className="waiting-room"><p>Join a server to get started!</p></div>} */}
                 
             </div>

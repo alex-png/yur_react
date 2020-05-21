@@ -34,11 +34,15 @@ export default class Messages extends React.Component {
     }
     handleSubmit = (e) => {
         e.preventDefault();
+        if(this.state.userMessage === ""){
+            return
+        }
+
         let userMessage = this.state.userMessage;
         console.log(this.state.messages, this.state.userMessage)
         this.setState((prevState) => ({
             userMessage: "",
-            messages: [...prevState.messages, {message: userMessage}]
+            messages: [...prevState.messages, {message: userMessage, loading: true}]
             })
         )
         //send userMessage to backend
@@ -61,6 +65,7 @@ export default class Messages extends React.Component {
     }
 
     componentDidUpdate() {
+        debugger
         this.scrollToBottom();
     }
 
